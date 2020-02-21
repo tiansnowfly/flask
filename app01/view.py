@@ -1,6 +1,6 @@
 from app01 import app # 从app01包中导入实例化的app应用程序对象
 from flask import render_template,url_for,flash,redirect
-from app01.form import LoginForm
+from app01.forms import LoginForm
 
 @app.route('/')
 def index():
