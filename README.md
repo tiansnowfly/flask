@@ -73,15 +73,15 @@ yourapp/
 blog\
 	venv\
 	app\
-    	static\
-    	templates\
+    		static\
+    		templates\
 		__init__.py
 		routes.py
-        config.py
-        requirements.txt
+        	config.py
+        	requirements.txt
 ```
 
-进入microblog目录下面创建一个app目录，app目录下面创建一个__init__.py文件,代码:
+进入blog目录下面创建一个app目录，app目录下面创建一个__init__.py文件,代码:
 
 ```python
 from flask import Flask
