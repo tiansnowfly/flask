@@ -73,8 +73,8 @@ yourapp/
 blog\
 	venv\
 	app\
-    	\static
-    	\templates
+    	static\
+    	templates\
 		__init__.py
 		routes.py
         config.py
