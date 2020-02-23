@@ -85,7 +85,8 @@ blog\
 
 ```python
 from flask import Flask
-app=Flask(__name__)//创建一个应用程序对象
+//创建一个应用程序对象
+app=Flask(__name__)
 ```
 
 __name__是预定义python变量,表示当前调用flask的模块的名字。当需要加载资源的时候，flask就是用这个位置作为起点来计算出绝对路径。
