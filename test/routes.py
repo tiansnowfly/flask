@@ -20,6 +20,7 @@ def api_upload():
         print(file_name)
         jsonTest=pd.read_json(file_name)
         print('{}'.format(jsonTest))
+        # 返回请求的类型
         return jsonify({"success": 'success', "msg": "请求成功"})
     else:
         return jsonify({"error": 'error', "msg": "请求失败"})
