@@ -1,8 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, {{ user.username }}!</h1>
-    {% for post in posts %}
-    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
+    <div style="width:100px;float:left;margin-left:35px;">
+        <form method="post" enctype="multipart/form-data" id="test_form" style="margin-top:45px;">
+            <table border="1" id="table">
+                <tr>
+                    <td>00</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>03</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                </tr>
+            </table>
+            <input type="button" onclick="ajaxForm()" value="上传数据">
+        </form>
+        <a href="{{ url_for('api_upload')}}" id="atest">登陆</a>
+    </div>
 {% endblock %}
