@@ -1,6 +1,6 @@
 from flask import render_template, flash, redirect, url_for, request, jsonify
 from werkzeug.utils import secure_filename
-
+import json
 from test import app
 import os
 import pandas as pd
@@ -17,11 +17,14 @@ def api_upload():
         os.makedirs(file_dir)
     elif os.path.exists(file_dir):
         file_name=os.path.join(file_dir,'test.json')
-        print(file_name)
         jsonTest=pd.read_json(file_name)
-        print('{}'.format(jsonTest))
+        print(url_for('api_upload'))
+        with open(file_name,'r') as f:
+            content=f.readlines()
+            content=json.loads(content[0])
+            f.close()
         # 返回请求的类型
-        return jsonify({"success": 'success', "msg": "请求成功"})
+        return jsonify(content)
     else:
         return jsonify({"error": 'error', "msg": "请求失败"})
 
