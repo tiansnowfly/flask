@@ -23,7 +23,7 @@ def api_upload():
             content=f.readlines()
             content=json.loads(content[0])
             f.close()
-        # 返回请求的类型
+        # 返回请求的类型返回的类型还不能是numpy.int32
         return jsonify(content)
     else:
         return jsonify({"error": 'error', "msg": "请求失败"})
